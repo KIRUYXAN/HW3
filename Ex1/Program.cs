@@ -4,7 +4,6 @@
 //Проверить работу класса.
 //в) Добавить диалог с использованием switch демонстрирующий работу класс.
 
-string text;
 Console.WriteLine("Введите реальную часть 1");
 double v1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите мнимую часть 1");

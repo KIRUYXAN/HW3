@@ -1,23 +1,27 @@
 class Rac
 {
-	public static Rac operator +()
+    public int num, den;
+    public Rac(int x, int y)
     {
-        Rac rac = new Rac();
-        return rac;
+        num = x;
+        den = y;
     }
-    public static Rac operator -()
+    public static Rac operator *(Rac a, Rac b)
     {
-        Rac rac = new Rac();
-        return rac;
+        Rac result;
+        result = new(a.num * b.num, a.den * b.den);
+        return result;
     }
-    public static Rac operator *()
+    public static Rac operator /(Rac a, Rac b)
     {
-        Rac rac = new Rac();
-        return rac;
+        Rac result;
+        result = new(a.num * b.den, a.den * b.num);
+        return result;
     }
-    public static Rac operator /()
+    public string Text()
     {
-        Rac rac = new Rac();
-        return rac;
+        string text;
+        text = $"{num}/{den}";
+        return text;
     }
 }
