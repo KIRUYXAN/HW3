@@ -26,11 +26,11 @@ void input()
         Console.WriteLine("Это не число");
     else
         a = Convert.ToInt32(b);
-        Sum(a);
+        Add(a);
     Console.WriteLine("");
 }
 
-void Sum(int x)
+void Add(int x)
 {
     if (x > 0 && x % 2 != 0)
     {
