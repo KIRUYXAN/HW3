@@ -6,7 +6,7 @@
         re = a;
         im = b;
     }
-    public string Print()
+    public string Text()
     {
         string text;
         if (im < 0) text = $"{re} - {-im}i";
@@ -41,18 +41,12 @@ class ComplexC
         re = a;
         im = b;
     }
-    public string Print()
+    public string Text()
     {
         string text;
         if (im < 0)  text = $"{re} - {-im}i";
         else text = $"{re} + {im}i";
         return text;
-    }
-    public ComplexC Sum(ComplexC z)
-    {
-        ComplexC result;
-        result = new(re + z.re, im + z.im);
-        return result;
     }
     public static ComplexC operator +(ComplexC z1, ComplexC z2)
     {
