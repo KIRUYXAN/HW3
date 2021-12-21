@@ -10,18 +10,31 @@ bool flag;
 
 do
 {
-    do
-    {
-        Console.WriteLine("Введите число. Чтобы закончить введите 0");
-        b = Console.ReadLine();
-        flag = int.TryParse(b, out a);
-        if (!flag)
-            Console.WriteLine("Это не число");
-        Console.WriteLine("");
+    do 
+    { 
+        input(); 
     } while (!flag);
-    a = Convert.ToInt32(b);
-    if (a > 0 && a % 2 > 0)
-        text += $"{Convert.ToInt32(a)} ";
-        sum += a;
 } while (a != 0) ;
 Console.WriteLine($"\n{text} \n{sum}");
+
+void input()
+{
+    Console.WriteLine("Введите число. Чтобы закончить введите 0");
+    b = Console.ReadLine();
+    flag = int.TryParse(b, out a);
+    if (!flag)
+        Console.WriteLine("Это не число");
+    else
+        a = Convert.ToInt32(b);
+        Sum(a);
+    Console.WriteLine("");
+}
+
+void Sum(int x)
+{
+    if (x > 0 && x % 2 != 0)
+    {
+        text += $"{x} ";
+        sum += x;
+    }
+}
