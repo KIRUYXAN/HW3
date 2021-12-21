@@ -25,8 +25,6 @@ if (a == "Struct" || a == "struct")
 	Console.WriteLine("Struct: " + z2.Text());
 
 	ComplexS z3;
-	z3 = z1.Sum(z2);
-	Console.WriteLine("StructSum: " + z3.Text());
 	z3 = z1 + z2;
 	Console.WriteLine("StructSum: " + z3.Text());
 

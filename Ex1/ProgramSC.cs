@@ -13,12 +13,6 @@
         else text = $"{re} + {im}i";
         return text;
     }
-    public ComplexS Sum(ComplexS z)
-    {
-        ComplexS result;
-        result = new(re + z.re, im + z.im);
-        return result;
-    }
     public static ComplexS operator +(ComplexS z1, ComplexS z2)
     {
         ComplexS result;
