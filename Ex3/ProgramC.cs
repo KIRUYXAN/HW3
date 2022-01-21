@@ -6,6 +6,32 @@ class Rac
         num = x;
         den = y;
     }
+    public static Rac operator +(Rac a, Rac b)
+    {
+        Rac result;
+        int c = a.num, d = b.num, e = a.den;
+        if (a.den != b.den)
+        {
+            c *= b.den;
+            d *= a.den;
+            e *= b.den;
+        }
+        result = new(c + d, e);
+        return result;
+    }
+    public static Rac operator -(Rac a, Rac b)
+    {
+        Rac result;
+        int c = a.num, d = b.num, e = a.den;
+        if (a.den != b.den)
+        {
+            c *= b.den;
+            d *= a.den;
+            e *= b.den;
+        }
+        result = new(c - d, e);
+        return result;
+    }
     public static Rac operator *(Rac a, Rac b)
     {
         Rac result;
